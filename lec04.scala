@@ -90,16 +90,16 @@ foo(n)
 
 
 // Не хвостовая
-def sum(list:List[Int]) = {
-    if(list.empty) 0 // так тоже никогда не пишут
+def sum(list:List[Int]): Int = {
+    if(list.isEmpty) 0 // так тоже никогда не пишут
     else list.head + sum(list.tail)
 }
 // Хвостовая
 @tailrec // проверка хвостовая ли рекурсия
-def sum(list:List[Int]) = {
-    def _sum(list:List[Int], s:Int) = {
-        if(l.empty) s
-        else _sum(l.tail, s+l.head)
+def sum2(list:List[Int]) = {
+    def _sum(list:List[Int], s:Int): Int = {
+        if(list.isEmpty) s
+        else _sum(list.tail, s+list.head)
     }
     _sum(list, 0)
 }

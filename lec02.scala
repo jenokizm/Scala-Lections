@@ -92,8 +92,10 @@ val arr = Array(Array(1,2),Array(3,4)) // Двумерный массив из 4
 // Массив идущих подряд символов от start до end не включительно
 val arr = Array.range(start, end)
 // Загуглить эти два метода
-val arr = Array.itterate
-val arr = Array.tobulate // Мощь!!!
+val arr = Array.iterate //вызов iterate(start, len)(f)
+//iterate - Returns an array containing repeated applications of a function to a start value.
+val arr = Array.tabulate // Мощь!!!
+//tabulate - Returns an array containing values of a given function over a range of integer values starting from 0.
 // Заполнить каким-то значением (например, массив двоек)
 val arr = Array.fill
 
@@ -112,6 +114,6 @@ val arr = Array.fill
 // Nothing является наследником AnyVal и AnyRef (он ниже, чем всё что вышенаписанное) 
 
 // Очень много всего для коллекций (массивы, списки и т.д.), пример:
-.head // первый элемент коллекции
-.tail // все остальные
+.head // первый элемент коллекции //голова
+.tail // все остальные //хвост
 
